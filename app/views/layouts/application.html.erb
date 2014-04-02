@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html>
-<title>"My Admin"</title> 
+<title>My Admin</title> 
 <header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container">
+    <div class="navbar-inner">
+       <div class="container">
 
 
-  <title>MyAdmin</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+        <title>My Admin</title>
+                <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+                <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+                <%= csrf_meta_tags %>
 
-<% if current_user %>
-  Logged in as <%= current_user.email %> |
-  <%= link_to "Log Out", logout_path %> |
-  <%= link_to "Manage Users", users_path %> |
+                <% if current_user %>
+         
+         <p style= "color: #FFFFCC">   Logged in as <%= current_user.email %> </p> |
+                <%= link_to "Log Out", logout_path %> |
+                <%= link_to "Manage Users", users_path %> |
 
  
-<% else %>
-  <%= link_to "Sign Up", signup_path %> or
-  <%= link_to "Log In", login_path %>
-<% end %>
-</div>
-</div>
+                 <% else %>
+                  <%= link_to "Sign Up", signup_path %> or
+                  <%= link_to "Log In", login_path %>
+                  <% end %>
+    
+      </div> 
+    </div>
 </header>
 
 
 <body>
-<div class="container">
-      <% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>"><%= value %></div>
-        <% end %>
-<%= yield %>
-<footer class="footer">
-  <small>
-  </small>
-<%= debug(params) if Rails.env.development? %>
-</div>
+      <div class="container">
+                <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>">
+                <%= value %></div>
+                 <% end %>
+                 <%= yield %>
+        <footer class="footer">
+         <small> </small>
+                <%= debug(params) if Rails.env.development? %>
+         </footer>
+     </div>
 </body>
+
 </html>

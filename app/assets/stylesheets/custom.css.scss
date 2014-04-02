@@ -46,6 +46,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  color: $grayDarker; /* $grayDarker*/
 }
 
 h2 {
@@ -54,7 +55,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $grayLight;
+  color: $grayLight;  /*$grayLight*/
 }
 
 p {
@@ -188,6 +189,19 @@ input, textarea, select, .uneditable-input {
 input {
   height: auto !important;
 }
+
+a{
+  color: #fff;
+  &:visited {
+    color: #fff;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  } 
+}
+
+
 
 #error_explanation {
   color: #f00;
