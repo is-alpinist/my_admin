@@ -1,12 +1,14 @@
 <p id="notice"><%= notice %></p>
 
+<div class="row">
+  <div class="span6 offset3">
+    
 <p>
   <strong>First:</strong>
   <%= @user.first %>
 </p>
 
-<p>
-  <strong>Last:</strong>
+<p>  <strong>Last:</strong>
   <%= @user.last %>
 </p>
 
@@ -22,3 +24,6 @@
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+
+</div>
+  </div>

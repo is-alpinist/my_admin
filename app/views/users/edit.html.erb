@@ -1,46 +1,47 @@
 <h1>Editing user</h1>
 
+
+ <div class="row">
+    <div class="span6 offset3">
 <%= form_for (@user) do |f| %>
   <% if @user.errors.any? %>
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
-      <ul>
+      <p>Form is invalid</p>
+     
         <% @user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+          <p><%= message %></p>
         <% end %>
-      </ul>
-    </div>
+      
   <% end %>
 
-  <div class="field">
-    <%= f.label :first %><br />
+
+    <%= f.label :first %>
     <%= f.text_field :first%>
-  </div>
 
-  <div class="field">
-    <%= f.label :last %><br />
+
+
+    <%= f.label :last %>
     <%= f.text_field :last %>
-  </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email %>
     <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="field">
-    <%= f.label :admin %><br />
-    <%= f.check_box :admin %>
-  </div>
+    
+      <%= f.label :admin %>
+    <%= f.check_box :admin %></br>
 
-  <div class="actions"><%= f.submit "Update" %></div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+ 
+  
+  
+
+  <%= f.submit "Update", class: "btn btn-large btn-primary" %>
 <% end %>
+
 
 <%= link_to 'Show', @user %> |
 <%= link_to 'Back', users_path %>
+</div>
+</div>
