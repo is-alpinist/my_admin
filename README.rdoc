@@ -1,5 +1,10 @@
 README
 
+<<<<<<< HEAD
 user administration for codefellows 
 
 using DB: PostegreSql
+=======
+user administration for codefellows
+DB: PostegreSql
+>>>>>>> 3fd09aa15749d3d2b8e2dcd762cb1ab6e373fc44
